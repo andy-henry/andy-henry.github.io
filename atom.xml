@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[安迪亨利]]></title>
+  <subtitle><![CDATA[ah_6th AT hotmail.com]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://andy-henry.github.io/"/>
+  <updated>2014-09-22T15:37:25.075Z</updated>
+  <id>http://andy-henry.github.io/</id>
+  
+  <author>
+    <name><![CDATA[Andy Henry]]></name>
+    <email><![CDATA[ah_6th AT hotmail.com]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[The Second Letter to Brother Sen]]></title>
+    <link href="http://andy-henry.github.io/2014/09/20/brother_sen2/"/>
+    <id>http://andy-henry.github.io/2014/09/20/brother_sen2/</id>
+    <published>2014-09-20T13:24:00.000Z</published>
+    <updated>2014-09-22T15:32:02.000Z</updated>
+    <content type="html"><![CDATA[<ol>
+<li><p>I initially scanned the comments of <em>An Introdution to Scientific Programming and Simulation with R</em>. It makes emphasis on scientific computation, as it titled and you stated. It treats R as a Matlab-like software, so that you have make great progress in Ng’s machine learning course where use Matlab frequently.   <a id="more"></a></p>
+</li>
+<li><p>I have graduated, and I am no longer a student. I must be employed as quickly. As a result, I am afraid that I have not enough time to participate MOOCs. It is practical skills and working experience rather than theories from classes that I can utilize in my jobs for the future. As to being a PhD,… Only later.</p>
+</li>
+<li><p>I found that you had downloaded a Linux book titled <em>The Linux Command Lines: A Complete Introduction</em>. Actually, I have been a Linuxer since early 2013. Linux is based on CLI (Command-Line Interface), opposite to GUI in Windows, which implys more fundamentals of computers (and maybe programming). I recommend you to install it in your computer physically. Just try command lines in Linux, and failure does not matter. </p>
+</li>
+<li><p>There are another three books in your list I want to point out. PRML and ESLII are both the most important references in machine learning. However, their prerequires involve so many mathematical and statistical theories, so we probably cannot grasp them . <em>Applied Predictive Modelling</em> is a recent book, and it is being translated into Chinese. I will read it after the publication of Chinese editon. It is said that PREDICTION is one of the prior activities in business, and I hope APM is useful for us.</p>
+</li>
+</ol>
+<blockquote>
+<p>Hi brother Yong,</p>
+<p>Thanks a lot for you recommendations of the R books. They are very helpful and give me a clear guidance on how to learn R in an effective way. I’m really impressed by your elegant English writing. I think your great English writing combined with your solid academic background, a PHD program is the best fit for you haha.</p>
+<p>I attached some books with this email. (At first I made one zip file but I don’t know why I can’t upload it, so I upload one by one. Sorry about the inconvenience.) One of the R book I would recommend for you is called Introduction to Scientific Programming and Simulation Using R, which you can find in the attachment. I read the first 12 chapters and I gain a lot insights on how to write algorithms using R. After reading this book, I’m able to finish the assignment using R, instead of matlab, in Andrew Ng’s machine learning course on Coursera. I’m currently taking an introduction to interactive programming in Python. It just started this week so we can take it together if you want. Here is a screen shot of this course: </p>
+<p>I’m also going to take another two coursers on coursera, which will start in next few days. Here is a screen shot of them:</p>
+<p>(omit)</p>
+<p>Actually I have finished first 8 weeks of study of machine learning and the corresponding assignments. Sometimes I was stuck by the programming assignments of machine learning, I would go to this website (<a href="https://github.com/merwan/ml-class" target="_blank">https://github.com/merwan/ml-class</a>) for help. The code solutions this website provide are very concise and I learnt a lot from them. The reason I re-take this course is that this time I would like to get the certificate which has a signature of Andrew Ng on it. </p>
+<p>Ok, that’s all I want to share with you today. Let’s share experience, insight and resource with each other continually, because I believe it will a great way to make big improvement for both of us. I hope everything well with you!</p>
+<p>Best,</p>
+<p>Brother Sen</p>
+</blockquote>
+]]></content>
+    <summary type="html"><![CDATA[<ol>
+<li><p>I initially scanned the comments of <em>An Introdution to Scientific Programming and Simulation with R</em>. It makes emphasis on scientific computation, as it titled and you stated. It treats R as a Matlab-like software, so that you have make great progress in Ng’s machine learning course where use Matlab frequently.   ]]></summary>
+    
+      <category term="Essay" scheme="http://andy-henry.github.io/tags/Essay/"/>
+    
+      <category term="Essay" scheme="http://andy-henry.github.io/categories/Essay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Recommend R Books for Brother Sen]]></title>
+    <link href="http://andy-henry.github.io/2014/09/15/brother_sen/"/>
+    <id>http://andy-henry.github.io/2014/09/15/brother_sen/</id>
+    <published>2014-09-14T18:55:38.000Z</published>
+    <updated>2014-09-15T05:30:02.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to my personal blog. I have been reading some R books recently, and I want to share my experiments with you.</p>
+<p><a href="http://www.amazon.com/Everyone-Advanced-Analytics-Graphics-Addison-Wesley/dp/0321888030" target="_blank"><em>R for Everyone</em></a> is the prescribed textbook in your class, which have already accumulated many 4-stars and 5-stars reviews on Amazon. It have not been introduced to China, so I just readed the contents and reviews from audiences. RfE is new, and it deals with some packages which were developed recently. You have told me that this book involved the usage of various packages only, lacking in programming. This book, however, is for beginners, not for intermediate or advanced readers who will take advantage of the programming features. RfE is readable and accessible for you, and maybe you have to read it carefully and thoroughly in order to get an A grade.<br><a id="more"></a></p>
+<p>More PROGRAMMING, less statistics. This is my criteria when choosing R books. <a href="http://www.amazon.com/The-Art-Programming-Statistical-Software/dp/1593273843" target="_blank"><em>The Art of R Programming</em></a> is a wonderful resource for programming, as its title showed. You have read the first half of it, and please finish the other half as quickly. The capacity of programming will play an essential role in your job-searching.</p>
+<p>In addition, I believe that <a href="http://www.amazon.com/R-For-Dummies-Andrie-Vries/dp/1119962846" target="_blank"><em>R for Dummies</em></a> and <a href="http://www.amazon.com/R-Nutshell-Joseph-Adler/dp/144931208X" target="_blank"><em>R in a Nutshell (2nd edition)</em></a> <a href="http://vdisk.weibo.com/s/dFF6L3zvg0YOz" target="_blank">(Download PDF!)</a> are ideal for you. They involve more language features of R, which can contribute to your understanding of R as a programming language (rather than a statistal software). RfD is a very basic book, written for R users who have not ever learn other programming languages such as C, C++ and Python. RiaN is intermediate, which covers many details in the R language. RiaN has been translated into Chinese, and I am reading it.</p>
+<p>In the contrast, <a href="http://www.amazon.com/R-Action-Robert-Kabacoff/dp/1935182390" target="_blank"><em>R in Action</em></a> <a href="http://vdisk.weibo.com/s/BENUDGyNNBJbD" target="_blank">(Download PDF!)</a> and <a href="http://www.amazon.com/R-Book-Michael-J-Crawley/dp/0470973927" target="_blank"><em>The R Book (2nd edition)</em></a> <a href="http://vdisk.weibo.com/s/BENUDGyNNBJbD" target="_blank">(Download PDF!)</a> are inappropriate for you. They are filled with statistical methods.</p>
+<p>What’s more, R is a powerful tool in terms of plots and graphics. I have not learn R graphics, but <a href=""><em>R Graphics Cookbook</em></a> <a href="http://vdisk.weibo.com/s/zCsHY3d5WsLhp" target="_blank">(Download PDF!)</a> is very popular on Amazon. </p>
+<p>PS. <a href="http://en.wikipedia.org/wiki/Machine_learning" target="_blank">Machine Learning</a> is a field of computer science, but its implementation can be conducted with R (and Python). I think you can try <a href="http://www.amazon.com/Machine-Learning-Hackers-Drew-Conway/dp/1449303714" target="_blank"><em>Machine Learning for Hackers</em></a> <a href="http://vdisk.weibo.com/s/aHRjF16QLjLeh" target="_blank">(Download PDF!)</a> as a taste. An alternative is <a href="http://www.amazon.com/Machine-Learning-R-Brett-Lantz/dp/1782162143" target="_blank"><em>Machine Learning with R</em></a> <a href="http://vdisk.weibo.com/s/tltT62pX5YJ75" target="_blank">(Download PDF!)</a>, but I have not read it. </p>
+<p>I will discover other R books. So much for now.</p>
+]]></content>
+    <summary type="html"><![CDATA[<p>Welcome to my personal blog. I have been reading some R books recently, and I want to share my experiments with you.</p>
+<p><a href="http://www.amazon.com/Everyone-Advanced-Analytics-Graphics-Addison-Wesley/dp/0321888030" target="_blank"><em>R for Everyone</em></a> is the prescribed textbook in your class, which have already accumulated many 4-stars and 5-stars reviews on Amazon. It have not been introduced to China, so I just readed the contents and reviews from audiences. RfE is new, and it deals with some packages which were developed recently. You have told me that this book involved the usage of various packages only, lacking in programming. This book, however, is for beginners, not for intermediate or advanced readers who will take advantage of the programming features. RfE is readable and accessible for you, and maybe you have to read it carefully and thoroughly in order to get an A grade.<br>]]></summary>
+    
+      <category term="Essay" scheme="http://andy-henry.github.io/tags/Essay/"/>
+    
+      <category term="Essay" scheme="http://andy-henry.github.io/categories/Essay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[我所购买过的图灵书]]></title>
+    <link href="http://andy-henry.github.io/2014/09/05/turingbooks/"/>
+    <id>http://andy-henry.github.io/2014/09/05/turingbooks/</id>
+    <published>2014-09-05T05:21:07.000Z</published>
+    <updated>2014-09-05T05:32:44.000Z</updated>
+    <content type="html"><![CDATA[<p>我所购买的图灵书。</p>
+<a id="more"></a>
+
+<p>用代码模式只是为了要行号。。。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+</pre></td><td class="code"><pre>金融数学 baxter
+流行上的微积分 spivak
+实用非参数统计 conover
+概率论及其应用 feller
+数值线性代数 trefethen
+应用数值线性代数 demmel
+统计模拟 ross
+计算机科学概论 brookshear
+数据库系统基础 初级篇 elmasri
+图论导引 chartrand
+随机过程初级教程 
+分形几何 falconer
+c语言程序设计现代方法 king
+概率论及其应用 第<span class="number">2</span>卷第<span class="number">2</span>版 feller
+数据库系统教程 高级篇 elmasri
+密码学与编码理论
+微积分入门i 小平
+微分方程动力系统与混沌导论 hirsch
+运筹学导论 初级篇 taha
+微积分入门 ii 小平
+近世代数概论
+数论导引
+从微分观点看拓扑
+陶哲轩实分析
+不等式
+运筹学导论 高级篇
+写给大家看的设计书
+线性代数及其应用 lax
+应用组合数学
+线性代数应该这样学
+ubuntu linux 基础篇
+金融时间序列分析 第<span class="number">2</span>版
+复分析 可视化方法
+纯数学教程
+计算统计
+数值分析导论
+c语言程序设计现代方法 第<span class="number">2</span>版
+基础拓扑学
+e的故事
+怎样解题
+代数的历史
+微积分的历程
+数学沉思录
+这也能想到
+信息检索导论
+多元统计分析导论
+数据挖掘导论
+数学与生活
+<span class="keyword">python</span>参考手册
+罗素的故事
+七周七语言
+思考的乐趣
+鲜活的数据
+算法 第<span class="number">4</span>版
+R语言实战
+具体数学
+sql必知必会
+统计思维
+机器学习实战
+数据可视化实战
+推荐系统
+numpy攻略
+linux就是这个范儿
+</pre></td></tr></table></figure>]]></content>
+    <summary type="html"><![CDATA[<p>我所购买的图灵书。</p>
+]]></summary>
+    
+      <category term="图书" scheme="http://andy-henry.github.io/tags/%E5%9B%BE%E4%B9%A6/"/>
+    
+      <category term="图灵教育" scheme="http://andy-henry.github.io/tags/%E5%9B%BE%E7%81%B5%E6%95%99%E8%82%B2/"/>
+    
+      <category term="图书" scheme="http://andy-henry.github.io/categories/%E5%9B%BE%E4%B9%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[tagxedo.com在线制作可视化词云]]></title>
+    <link href="http://andy-henry.github.io/2014/05/24/tagxedo/"/>
+    <id>http://andy-henry.github.io/2014/05/24/tagxedo/</id>
+    <published>2014-05-24T12:44:15.000Z</published>
+    <updated>2014-08-04T18:21:34.000Z</updated>
+    <content type="html"><![CDATA[<p>在tagxedo.com在线制作可视化词云，操作简单，生成的云图种类丰富、造型美观。<br><a id="more"></a></p>
+<p>R语言中使用wordcloud包可以制作词云，但是效果较差。只使用统计软件制作的云图，大都需要进一步使用图像软件进行处理（比如Inkscape/GIMP或Adobe Illustrator）。</p>
+<p>现在tagxedo.com提供了一个<a href="http://www.tagxedo.com/app.html" target="_blank">在线制作程序</a>（基于Silverlight）。</p>
+<p><strong>功能简述：</strong></p>
+<p>Color：改变文字的色彩</p>
+<p>Theme：改变整体的色彩搭配（包括文字与背景）</p>
+<p>Font：改变字体（限英语，中文只能使用默认字体）</p>
+<p>Orientation：文字的方向，包括横向，纵向，垂直（横向+纵向），任意</p>
+<p>Layout：</p>
+<p>All：随意生成（改变以上所有要素）</p>
+<p>Shape：改变图形的形状（可以自定义）</p>
+<p>Histroy：所做云图的历史纪录</p>
+<p>Word | Layout Options: 设置哪些词不出现，增加哪个词，等等。</p>
+<p>更多信息见<a href="http://www.tagxedo.com" target="_blank">官网</a>。</p>
+]]></content>
+    <summary type="html"><![CDATA[<p>在tagxedo.com在线制作可视化词云，操作简单，生成的云图种类丰富、造型美观。<br>]]></summary>
+    
+      <category term="可视化" scheme="http://andy-henry.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="词云" scheme="http://andy-henry.github.io/tags/%E8%AF%8D%E4%BA%91/"/>
+    
+      <category term="tagxedo" scheme="http://andy-henry.github.io/tags/tagxedo/"/>
+    
+      <category term="可视化" scheme="http://andy-henry.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Rwordseg、Rweibo、tm的安装]]></title>
+    <link href="http://andy-henry.github.io/2014/05/24/rwordseg_install/"/>
+    <id>http://andy-henry.github.io/2014/05/24/rwordseg_install/</id>
+    <published>2014-05-24T12:43:50.000Z</published>
+    <updated>2014-08-04T15:30:28.000Z</updated>
+    <content type="html"><![CDATA[<p>使用默认方法安装相关R中文文本挖掘包（tmcn、Rwordseg、Rweibo）时，会出现安装失败。合适的方法是：通过源代码安装相关包的程序：手工下载源代码及其依赖，然后编译安装。<br><a id="more"></a></p>
+<p>首先是基础性的tm包。tm包是R文本挖掘的通用包。直接使用<code>install.package</code>即可安装。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="keyword">install</span>.packages(<span class="string">"tm"</span>)
+</pre></td></tr></table></figure>
+
+<p><a href="http://jliblog.com/app/tmcn" target="_blank">tmcn</a>、<a href="http://jliblog.com/app/rwordseg" target="_blank">Rwordseg</a>、<a href="http://jliblog.com/app/rweibo" target="_blank">Rweibo</a>是李舰等人开发的中文文本挖掘包。三个网页（官网）中提供了包说明与安装方法。但经测试，其中的安装方法不可用。</p>
+<p><strong>正确的安装方法为</strong>：</p>
+<p>先下载<a href="https://r-forge.r-project.org/R/?group_id=1571" target="_blank">tmcn</a>、[Rwordseg]、<a href="https://r-forge.r-project.org/projects/rweibo/" target="_blank">Rweibo</a><br>的源码。</p>
+<p>tmcn无依赖关系，直接使用。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>install.packages(<span class="string">"~/Downloads/tmcn_0.1-3.tar"</span>, repos=NULL, <span class="keyword">type</span>=<span class="string">"source"</span>)
+</pre></td></tr></table></figure>
+
+<p>Rwordseg依赖于rJava。</p>
+<p><em>该包需要预先安装Java环境。如果未曾安装Java，请先安装Java，安装Java（及PATH的配置）过程不再赘述。</em></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>install.packages(<span class="string">"rJava"</span>)  
+install.packages(<span class="string">"~/Downloads/Rwordseg_0.2-1.tar"</span>, repos=NULL, <span class="keyword">type</span>=<span class="string">"source"</span>)
+</pre></td></tr></table></figure>
+
+
+
+<p>Rweibo依赖于RCurl、rjson、XML、digest四个包。</p>
+<p><em>这四个依赖包同样不能直接安装，需要先从<a href="http://mirrors.ustc.edu.cn/CRAN/web/packages/available_packages_by_name.html" target="_blank">科大源</a>下载源码：（按包名搜索RCurl、XML、rjson、digest）</em>，然后再安装。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>install<span class="built_in">.</span>packages(<span class="string">"bitops"</span>) <span class="variable">#RCurl</span>的依赖  
+install<span class="built_in">.</span>packages(<span class="string">"~/Downloads/RCurl_1.95-4.1.tar"</span>, repos<span class="subst">=</span><span class="built_in">NULL</span>, <span class="keyword">type</span><span class="subst">=</span><span class="string">"source"</span>)  
+install<span class="built_in">.</span>packages(<span class="string">"~/Downloads/XML_3.98-1.1.tar"</span>, repos<span class="subst">=</span><span class="built_in">NULL</span>, <span class="keyword">type</span><span class="subst">=</span><span class="string">"source"</span>)  
+install<span class="built_in">.</span>packages(<span class="string">"~/Downloads/rjson_0.2.13.tar"</span>, repos<span class="subst">=</span><span class="built_in">NULL</span>, <span class="keyword">type</span><span class="subst">=</span><span class="string">"source"</span>)  
+install<span class="built_in">.</span>packages(<span class="string">"~/Downloads/digest_0.6.4.tar"</span>, repos<span class="subst">=</span><span class="built_in">NULL</span>, <span class="keyword">type</span><span class="subst">=</span><span class="string">"source"</span>)  
+  
+install<span class="built_in">.</span>packages(<span class="string">"~/Downloads/Rweibo_0.2-9.tar"</span>, repos<span class="subst">=</span><span class="built_in">NULL</span>, <span class="keyword">type</span><span class="subst">=</span><span class="string">"source"</span>)
+</pre></td></tr></table></figure>]]></content>
+    <summary type="html"><![CDATA[<p>使用默认方法安装相关R中文文本挖掘包（tmcn、Rwordseg、Rweibo）时，会出现安装失败。合适的方法是：通过源代码安装相关包的程序：手工下载源代码及其依赖，然后编译安装。<br>]]></summary>
+    
+      <category term="R" scheme="http://andy-henry.github.io/tags/R/"/>
+    
+      <category term="Rwordseg" scheme="http://andy-henry.github.io/tags/Rwordseg/"/>
+    
+      <category term="Rweibo" scheme="http://andy-henry.github.io/tags/Rweibo/"/>
+    
+      <category term="tmcn" scheme="http://andy-henry.github.io/tags/tmcn/"/>
+    
+      <category term="R语言" scheme="http://andy-henry.github.io/categories/R%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[英文版R处理中文显示为UFT-8原码及解决方案]]></title>
+    <link href="http://andy-henry.github.io/2014/05/24/uft8bug/"/>
+    <id>http://andy-henry.github.io/2014/05/24/uft8bug/</id>
+    <published>2014-05-24T12:43:13.000Z</published>
+    <updated>2014-09-19T16:34:55.000Z</updated>
+    <content type="html"><![CDATA[<p>在英文版R中，可能会将汉字显示为UFT-8原码。<br><a id="more"></a></p>
+<p>测试环境：OS X 10.9，R 3.1.0</p>
+<p>中文版的R存在大量翻译错误，故改为使用英文版。整体设置后，出现了以下问题：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="operator">a</span> &lt;- c(<span class="string">"你"</span>)  
+<span class="operator">a</span>  
+ <span class="comment"># [1] "\344\275\240"</span>
+</pre></td></tr></table></figure><br>后续对汉字的处理将无法进行。<br>有趣的是，从终端中直接使用R不存在这一问题，问题只存在于R控制台（即含Rstudio、ESS等需调用R控制台的IDE）。<br><br><br><strong>解决方案：</strong><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>Sys.setlocale(category = <span class="string">"LC_CTYPE"</span>, locate = <span class="string">"UTF-8"</span>)  
+ <span class="array"># </span>[<span class="number">1</span>] <span class="string">"UTF-8"</span>  
+a  
+ <span class="array"># </span>[<span class="number">1</span>] <span class="string">"你"</span>
+</pre></td></tr></table></figure><br>注意：在以下代码中，虽然可以解决中文显示问题，但会使R环境重新回到中文环境，这并非所期望的结果。<br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>Sys<span class="preprocessor">.setlocale</span>(<span class="string">"LC_CTYPE"</span>, <span class="string">"zh_CN.UTF-8"</span>)
+</pre></td></tr></table></figure>
+
+<h2 id="更新："><strong>更新：</strong></h2>
+<p>该方法对3.1.1已经<strong>失效</strong>，需改为</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>Sys<span class="preprocessor">.setlocale</span>(category=<span class="string">"LC_ALL"</span>,locale=<span class="string">"en_US.UTF-8"</span>)
+</pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html"><![CDATA[<p>在英文版R中，可能会将汉字显示为UFT-8原码。<br>]]></summary>
+    
+      <category term="R" scheme="http://andy-henry.github.io/tags/R/"/>
+    
+      <category term="uft-8" scheme="http://andy-henry.github.io/tags/uft-8/"/>
+    
+      <category term="乱码" scheme="http://andy-henry.github.io/tags/%E4%B9%B1%E7%A0%81/"/>
+    
+      <category term="R语言" scheme="http://andy-henry.github.io/categories/R%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[使用R汇总词频统计]]></title>
+    <link href="http://andy-henry.github.io/2014/05/24/statistics_rwordseg/"/>
+    <id>http://andy-henry.github.io/2014/05/24/statistics_rwordseg/</id>
+    <published>2014-05-24T06:04:38.000Z</published>
+    <updated>2014-08-04T15:45:56.000Z</updated>
+    <content type="html"><![CDATA[<p>Rwordseg是中文文本挖掘的常用包，可以进行分词。但是，Rwordseg并未提供词频统计的功能，需要用户具体实现。本文提供了进行词频统计的简单代码。<br><a id="more"></a></p>
+<h1 id="例子">例子</h1>
+<p>经爬虫得到的某电商网站某类商品的评论。使用<code>wc</code>进行字数统计：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>wc <span class="keyword">text</span>.txt  
+    
+ <span class="comment"># 0  121467 4694908</span>
+</pre></td></tr></table></figure>
+
+<h2 id="使用Rwordseg进行分词">使用Rwordseg进行分词</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="function">library(Rwordseg)</span>  
+<span class="function">require(Rwordseg)</span>  
+  
+<span class="value">text</span> &lt;- <span class="function">readLines(<span class="string">"text.txt"</span>)</span> #输入  
+seg &lt;- <span class="function">unlist(<span class="function">segmentCN(text)</span>)</span> #使用segmentCN进行分词
+</pre></td></tr></table></figure><br>##使用R代码汇总词频统计<br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="title">tag</span> &lt;- table(seg)  
+<span class="title">tbldf</span> &lt;- <span class="keyword">as</span>.<span class="typedef"><span class="keyword">data</span>.frame<span class="container">(<span class="title">tag</span>)</span>  </span>
+<span class="title">freqord</span> &lt;- order(tbldf$<span class="type">Freq</span>, decreasing=<span class="type">TRUE</span>) #数据汇总   final &lt;- tbldf[freqord,][<span class="number">1</span>:length(tag),] #最终结果  
+
+<span class="title">write</span>.table(final, <span class="string">"final.csv"</span>, sep=<span class="string">","</span>) #输出
+</pre></td></tr></table></figure>  
+
+<h2 id="查看分词时间">查看分词时间</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="keyword">system</span>.<span class="built_in">time</span>(seg &lt;- unlist(segmentCN(<span class="keyword">text</span>)))
+    
+ <span class="comment">#  user  system  elapsed   </span>
+ <span class="comment"># 21.074   0.149  20.594</span>
+</pre></td></tr></table></figure> 
+
+<p>可见，对约135万字的文本进行挖掘需要约20秒。（OS X 10.9, i7, 16G）</p>
+<h2 id="杂项">杂项</h2>
+<ul>
+<li><p>代码中的数据汇总方法使用了Norman Matloff “The Art of R Programming” pp134-6的方法。</p>
+</li>
+<li><p>分词后使用Python进行统计也是可以的，具体方法有待研究。（需使用Pandas。）</p>
+</li>
+</ul>
+]]></content>
+    <summary type="html"><![CDATA[<p>Rwordseg是中文文本挖掘的常用包，可以进行分词。但是，Rwordseg并未提供词频统计的功能，需要用户具体实现。本文提供了进行词频统计的简单代码。<br>]]></summary>
+    
+      <category term="分词" scheme="http://andy-henry.github.io/tags/%E5%88%86%E8%AF%8D/"/>
+    
+      <category term="词频" scheme="http://andy-henry.github.io/tags/%E8%AF%8D%E9%A2%91/"/>
+    
+      <category term="R" scheme="http://andy-henry.github.io/tags/R/"/>
+    
+      <category term="Rwordseg" scheme="http://andy-henry.github.io/tags/Rwordseg/"/>
+    
+      <category term="分词" scheme="http://andy-henry.github.io/categories/%E5%88%86%E8%AF%8D/"/>
+    
+  </entry>
+  
+</feed>

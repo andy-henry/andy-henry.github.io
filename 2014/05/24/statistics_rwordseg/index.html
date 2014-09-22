@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>使用R汇总词频统计 | 安迪亨利</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Rwordseg是中文文本挖掘的常用包，可以进行分词。但是，Rwordseg并未提供词频统计的功能，需要用户具体实现。本文提供了进行词频统计的简单代码。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用R汇总词频统计">
+<meta property="og:url" content="http://andy-henry.github.io/2014/05/24/statistics_rwordseg/">
+<meta property="og:image">
+<meta property="og:site_name" content="安迪亨利">
+<meta property="og:description" content="Rwordseg是中文文本挖掘的常用包，可以进行分词。但是，Rwordseg并未提供词频统计的功能，需要用户具体实现。本文提供了进行词频统计的简单代码。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用R汇总词频统计">
+<meta name="twitter:description" content="Rwordseg是中文文本挖掘的常用包，可以进行分词。但是，Rwordseg并未提供词频统计的功能，需要用户具体实现。本文提供了进行词频统计的简单代码。">
+  
+    <link rel="alternative" href="/atom.xml" title="安迪亨利" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">安迪亨利</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ah_6th AT hotmail.com</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="andy-henry.github.io">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-statistics_rwordseg" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/05/24/statistics_rwordseg/" class="article-date">
+  <time datetime="2014-05-24T06:04:38.000Z" itemprop="datePublished">05/24/2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/分词/">分词</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用R汇总词频统计
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Rwordseg是中文文本挖掘的常用包，可以进行分词。但是，Rwordseg并未提供词频统计的功能，需要用户具体实现。本文提供了进行词频统计的简单代码。<br><a id="more"></a></p>
+<h1 id="例子">例子</h1>
+<p>经爬虫得到的某电商网站某类商品的评论。使用<code>wc</code>进行字数统计：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>wc <span class="keyword">text</span>.txt  
+    
+ <span class="comment"># 0  121467 4694908</span>
+</pre></td></tr></table></figure>
+
+<h2 id="使用Rwordseg进行分词">使用Rwordseg进行分词</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="function">library(Rwordseg)</span>  
+<span class="function">require(Rwordseg)</span>  
+  
+<span class="value">text</span> &lt;- <span class="function">readLines(<span class="string">"text.txt"</span>)</span> #输入  
+seg &lt;- <span class="function">unlist(<span class="function">segmentCN(text)</span>)</span> #使用segmentCN进行分词
+</pre></td></tr></table></figure><br>##使用R代码汇总词频统计<br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="title">tag</span> &lt;- table(seg)  
+<span class="title">tbldf</span> &lt;- <span class="keyword">as</span>.<span class="typedef"><span class="keyword">data</span>.frame<span class="container">(<span class="title">tag</span>)</span>  </span>
+<span class="title">freqord</span> &lt;- order(tbldf$<span class="type">Freq</span>, decreasing=<span class="type">TRUE</span>) #数据汇总   final &lt;- tbldf[freqord,][<span class="number">1</span>:length(tag),] #最终结果  
+
+<span class="title">write</span>.table(final, <span class="string">"final.csv"</span>, sep=<span class="string">","</span>) #输出
+</pre></td></tr></table></figure>  
+
+<h2 id="查看分词时间">查看分词时间</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="keyword">system</span>.<span class="built_in">time</span>(seg &lt;- unlist(segmentCN(<span class="keyword">text</span>)))
+    
+ <span class="comment">#  user  system  elapsed   </span>
+ <span class="comment"># 21.074   0.149  20.594</span>
+</pre></td></tr></table></figure> 
+
+<p>可见，对约135万字的文本进行挖掘需要约20秒。（OS X 10.9, i7, 16G）</p>
+<h2 id="杂项">杂项</h2>
+<ul>
+<li><p>代码中的数据汇总方法使用了Norman Matloff “The Art of R Programming” pp134-6的方法。</p>
+</li>
+<li><p>分词后使用Python进行统计也是可以的，具体方法有待研究。（需使用Pandas。）</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+
+
+<div class="bdsharebuttonbox" style="float:right"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+     
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/R/">R</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Rwordseg/">Rwordseg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分词/">分词</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/词频/">词频</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/05/24/uft8bug/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">新一篇</strong>
+      <div class="article-nav-title">
+        
+          英文版R处理中文显示为UFT-8原码及解决方案
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+
+<section id="comments">
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"andy-henry"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+ </script>
+<!-- Duoshuo Comment END -->
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Essay/">Essay</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R语言/">R语言</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/分词/">分词</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/可视化/">可视化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图书/">图书</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Essay/">Essay</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R/">R</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rweibo/">Rweibo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rwordseg/">Rwordseg</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tagxedo/">tagxedo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tmcn/">tmcn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uft-8/">uft-8</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/乱码/">乱码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分词/">分词</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/可视化/">可视化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图书/">图书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图灵教育/">图灵教育</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/词云/">词云</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/词频/">词频</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Essay/" style="font-size: 15.00px;">Essay</a><a href="/tags/R/" style="font-size: 20.00px;">R</a><a href="/tags/Rweibo/" style="font-size: 10.00px;">Rweibo</a><a href="/tags/Rwordseg/" style="font-size: 15.00px;">Rwordseg</a><a href="/tags/tagxedo/" style="font-size: 10.00px;">tagxedo</a><a href="/tags/tmcn/" style="font-size: 10.00px;">tmcn</a><a href="/tags/uft-8/" style="font-size: 10.00px;">uft-8</a><a href="/tags/乱码/" style="font-size: 10.00px;">乱码</a><a href="/tags/分词/" style="font-size: 10.00px;">分词</a><a href="/tags/可视化/" style="font-size: 10.00px;">可视化</a><a href="/tags/图书/" style="font-size: 10.00px;">图书</a><a href="/tags/图灵教育/" style="font-size: 10.00px;">图灵教育</a><a href="/tags/词云/" style="font-size: 10.00px;">词云</a><a href="/tags/词频/" style="font-size: 10.00px;">词频</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09">September 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05">May 2014</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/09/20/brother_sen2/">The Second Letter to Brother Sen</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/15/brother_sen/">Recommend R Books for Brother Sen</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/05/turingbooks/">我所购买过的图灵书</a>
+          </li>
+        
+          <li>
+            <a href="/2014/05/24/tagxedo/">tagxedo.com在线制作可视化词云</a>
+          </li>
+        
+          <li>
+            <a href="/2014/05/24/rwordseg_install/">Rwordseg、Rweibo、tm的安装</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://weibo.com/" target="_blank">微博</a>
+          </li>
+        
+          <li>
+            <a href="http://zhihu.com/" target="_blank">知乎</a>
+          </li>
+        
+          <li>
+            <a href="http:/douban.com/" target="_blank">豆瓣</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Andy Henry<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>.
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape+</a>.
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script type="text/javascript" src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
