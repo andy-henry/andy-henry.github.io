@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>使用R汇总词频统计 | 安迪亨利</title>
+  <title>《数学思维公开课》试译 | 安迪亨利</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Rwordseg是中文文本挖掘的常用包，可以进行分词。但是，Rwordseg并未提供词频统计的功能，需要用户具体实现。本文提供了进行词频统计的简单代码。">
+  <meta name="description" content="说明：译稿为原书2.1节。该书将由其他译者进行翻译。
+近代以来，纯数学主要关注于数学对象的命题。
+数学对象包括以下事物：整数、实数、集合、函数，等等。数学命题的例子有：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用R汇总词频统计">
-<meta property="og:url" content="http://andy-henry.github.io/2014/05/24/statistics_rwordseg/">
+<meta property="og:title" content="《数学思维公开课》试译">
+<meta property="og:url" content="http://andy-henry.github.io/2014/11/26/mathematical_thinking/">
 <meta property="og:image">
 <meta property="og:site_name" content="安迪亨利">
-<meta property="og:description" content="Rwordseg是中文文本挖掘的常用包，可以进行分词。但是，Rwordseg并未提供词频统计的功能，需要用户具体实现。本文提供了进行词频统计的简单代码。">
+<meta property="og:description" content="说明：译稿为原书2.1节。该书将由其他译者进行翻译。
+近代以来，纯数学主要关注于数学对象的命题。
+数学对象包括以下事物：整数、实数、集合、函数，等等。数学命题的例子有：">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用R汇总词频统计">
-<meta name="twitter:description" content="Rwordseg是中文文本挖掘的常用包，可以进行分词。但是，Rwordseg并未提供词频统计的功能，需要用户具体实现。本文提供了进行词频统计的简单代码。">
+<meta name="twitter:title" content="《数学思维公开课》试译">
+<meta name="twitter:description" content="说明：译稿为原书2.1节。该书将由其他译者进行翻译。
+近代以来，纯数学主要关注于数学对象的命题。
+数学对象包括以下事物：整数、实数、集合、函数，等等。数学命题的例子有：">
   
     <link rel="alternative" href="/atom.xml" title="安迪亨利" type="application/atom+xml">
   
@@ -100,14 +106,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-statistics_rwordseg" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-mathematical_thinking" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/05/24/statistics_rwordseg/" class="article-date">
-  <time datetime="2014-05-24T06:04:38.000Z" itemprop="datePublished">05/24/2014</time>
+    <a href="/2014/11/26/mathematical_thinking/" class="article-date">
+  <time datetime="2014-11-26T13:53:27.000Z" itemprop="datePublished">11/26/2014</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/分词/">分词</a>
+    <a class="article-category-link" href="/categories/试译/">试译</a>
   </div>
 
   </div>
@@ -118,7 +124,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      使用R汇总词频统计
+      《数学思维公开课》试译
     </h1>
   
 
@@ -126,59 +132,75 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Rwordseg是中文文本挖掘的常用包，可以进行分词。但是，Rwordseg并未提供词频统计的功能，需要用户具体实现。本文提供了进行词频统计的简单代码。<br><a id="more"></a></p>
-<h1 id="例子">例子</h1>
-<p>经爬虫得到的某电商网站某类商品的评论。使用<code>wc</code>进行字数统计：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-</pre></td><td class="code"><pre>wc <span class="keyword">text</span>.txt  
-    
- <span class="comment"># 0  121467 4694908</span>
-</pre></td></tr></table></figure>
+        <p><strong>说明：译稿为原书2.1节。该书将由其他译者进行翻译。</strong></p>
+<p>近代以来，纯数学主要关注于<em>数学对象</em>的<em>命题</em>。</p>
+<p>数学对象包括以下事物：整数、实数、集合、函数，等等。数学命题的例子有：</p>
+<a id="more"></a>
 
-<h2 id="使用Rwordseg进行分词">使用Rwordseg进行分词</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-</pre></td><td class="code"><pre><span class="function">library(Rwordseg)</span>  
-<span class="function">require(Rwordseg)</span>  
-  
-<span class="value">text</span> &lt;- <span class="function">readLines(<span class="string">"text.txt"</span>)</span> #输入  
-seg &lt;- <span class="function">unlist(<span class="function">segmentCN(text)</span>)</span> #使用segmentCN进行分词
-</pre></td></tr></table></figure><br>##使用R代码汇总词频统计<br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-</pre></td><td class="code"><pre><span class="title">tag</span> &lt;- table(seg)  
-<span class="title">tbldf</span> &lt;- <span class="keyword">as</span>.<span class="typedef"><span class="keyword">data</span>.frame<span class="container">(<span class="title">tag</span>)</span>  </span>
-<span class="title">freqord</span> &lt;- order(tbldf$<span class="type">Freq</span>, decreasing=<span class="type">TRUE</span>) #数据汇总   final &lt;- tbldf[freqord,][<span class="number">1</span>:length(tag),] #最终结果  
-
-<span class="title">write</span>.table(final, <span class="string">"final.csv"</span>, sep=<span class="string">","</span>) #输出
-</pre></td></tr></table></figure>  
-
-<h2 id="查看分词时间">查看分词时间</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-</pre></td><td class="code"><pre><span class="keyword">system</span>.<span class="built_in">time</span>(seg &lt;- unlist(segmentCN(<span class="keyword">text</span>)))
-    
- <span class="comment">#  user  system  elapsed   </span>
- <span class="comment"># 21.074   0.149  20.594</span>
-</pre></td></tr></table></figure> 
-
-<p>可见，对约135万字的文本进行挖掘需要约20秒。（OS X 10.9, i7, 16G）</p>
-<h2 id="杂项">杂项</h2>
-<ul>
-<li><p>代码中的数据汇总方法使用了Norman Matloff “The Art of R Programming” pp134-6的方法。</p>
+<ol>
+<li><p>存在无穷多个素数。</p>
 </li>
-<li><p>分词后使用Python进行统计也是可以的，具体方法有待研究。（需使用Pandas。）</p>
+<li><p>对每个实数$a$，方程$x^2+a=0$都有一个实根。</p>
+</li>
+<li><p>$\sqrt{2}$是无理数。</p>
+</li>
+<li><p>如果$p(n)$表示小于或等于自然数$n$的素数的个数，那么随着$n$越来越大，<br>$p(n)$将接近于$n/\log_en$。</p>
+</li>
+</ol>
+<p>数学家不仅对以上这种数学命题感兴趣，而且对知晓命题的真假尤为感兴趣。举<br>例来说，在前文的命题例子中，(1)、(3)、(4)是真命题，但(2)是假命题。论证<br>每个命题是真命题还是假命题，不能像自然科学中那样进行观察、测量与试验，<br>而要进<em>证明</em>。关于证明，会在适当的时候进行进一步讨论。</p>
+<p>可以通过人们所熟知的欧几里得的精妙论证来证明(1)为真命题。<a href="第4章将会介绍这一证明所使用的关于素数的基本事实，但是大多数读者可能已经熟知了这一证明所需的知识。">^1</a>其思想是要证明，如果按升序列出素数<br>$$p_1,p_2,\dots,p_n,\dots$$<br>那么就一定可以永远列下去。（素数序列的前几个数是：$p_1=2$，$p_2=3$，<br>$p_3=5$，$p_4=7$，$p_5=11$，……）</p>
+<p>考虑一下，已经将素数列到了第$n$个： $$p_1,p_2,p_3,\dots,p_n$$<br>目标是去证明，可以向这一素数列中再添加一个素数。如果可以在不设定特定$n$值的情况下完成证明，就会立即表明素数列是无限的。</p>
+<p>将已列出的所有素数乘在一起，然后加$1$，并令该数为$N$，即<br>$$N=(p_1\cdot p_2\cdot p_3\cdot \dots \cdot p_n)+1$$<br>显然，$N$大于上一素数列中的所有素数，所以如果$N$为素数，那么就得知了<br>存在比$p_n$更大的素数，因此可以继续列出素数。（这里并没有说$N$是后一个<br>素数。实际上，$N$将比$p_n$大得多，所以$N$不可能是后一个素数。）</p>
+<p>现在来考虑一下，如果$N$不是素数会发生什么。那么就一定会存在一个素数<br>$q&lt;N$，使得$q$可以整除$N$。然而$p_1,p_2,\dots,p_n$都不能整除$N$，这是<br>因为用这些数除以$N$都会余$1$。所以，$q$一定会大于$p_n$。因此就会再次发<br>现，存在比$p_n$更大的素数，所以可以继续列下去。</p>
+<p>由于以上论证在任何情况下都与$n$无关，所以就可以得出：存在无穷多个素数。</p>
+<p>可以简单证明出(2)是假命题。由于实数的平方不会是负数，所以方程<br>$x^2+1=0$不会有实根。因为至少存在一个$a$使得方程$x^2+1=0$没有实根，<br>所以可以得出结论：命题(2)是假命题。</p>
+<p>后文将会给出命题(3)的证明。而已知的命题(4)的证明是极为复杂的，远远复杂<br>于这本入门教材所能囊括的内容。</p>
+<p>显然，在证明一个确定的命题是真是假之前，必须能够精确地理解命题的内容。<br>重要的是，数学是一门非常精确的学科，需要精确的进行表达。对于易于出现歧<br>义的单词而言，这就已经产生了困难，而现实生活中所使用的语言也很少是精确的。</p>
+<p>要特别指出，我们在日常生活中使用语言时，通常要依靠上下文来确定单词所传递<br>的含义。美国人会诚实地说：“七月份是夏天”，但澳大利亚人说这句话时就是错<br>误的。单词“夏天”在两种陈述中有相同的含义（指一年中最热的三个月），但是<br>美国与澳大利亚一年中的季节是不同的。</p>
+<p>再举一个例子。短语“小型啮齿动物”中的单词“小”，其含义（就大小而言）不同<br>于短语“小象”中“小”的含义。很多人都会认同，小型啮齿动物是一种小动物，但<br>小象肯定不是小动物。单词“小”所涉及的大小范围，可能会随着其所描述的实<br>体而变化。</p>
+<p>在日常生活中，我们通过上下文，以及对万物与生活的常识认识，来弥补书写与<br>阅读时所缺少的信息，并同时消除可能产生歧义的错误理解。</p>
+<p>举例来说，我们需要了解某些上下文，来正确地理解这句话：</p>
+<ul>
+<li>The man saw the woman with a telescope.</li>
+</ul>
+<p>谁有望远镜？男人还是女人？</p>
+<p>报纸头条存在的歧义——一般而言是“急就章”——有时可能会产生出人意料又饶有趣<br>味的第二种解读。近些年出现过的我最喜欢的头条有：</p>
+<ul>
+<li><p>Sisters reunited after ten years in checkout line at Safeway.</p>
+</li>
+<li><p>Prostitutes appeal to the Pope.</p>
+</li>
+<li><p>Large hole appears in High Street. City authorities are looking into<br>it.</p>
+</li>
+<li><p>Mayor says bus passengers should be belted.</p>
 </li>
 </ul>
+<p>系统地将英语精确化（<em>精确</em>定义每个单词的含义）是一项不可能完成<br>的任务。这样做也是没有必要的，因为一般而言人们依靠上下文与背景知识就可以很好地<br>理解单词的含义。</p>
+<p>但是在数学中，情况就不同了。精确性是至关重要的，不可能假定所有数学团体通<br>过相同的上下文与背景知识来消除歧义。此外，由于数学的结果经常会用于自<br>然科学与工程学中，因而歧义所带来的错误传递含义的代价是高昂的，甚至可能是致<br>命的。</p>
+<p>初看起来，将数学语言足够精确化，似乎是一项艰巨的任务。但幸运的是，数<br>学命题特殊而高度受限的属性，使数学的精确化成为可能。每个关键的数学命题<br>（公理、猜想、假设与定理）都是以下四种语言形式的正面或反面的变体：</p>
+<ol>
+<li><p>对象$a$拥有性质$P$</p>
+</li>
+<li><p>类型$T$的所有对象都拥有性质$P$</p>
+</li>
+<li><p>存在类型$T$的对象，其拥有性质$P$</p>
+</li>
+<li><p>如果命题A，那么命题B</p>
+</li>
+</ol>
+<p>或者使用连接词<em>和</em>、<em>或</em>、<em>非</em>，将这四种形式的 命题简单地进行组合。</p>
+<p>举例来说，</p>
+<ol>
+<li><p>$3$是素数。/$10$不是素数。</p>
+</li>
+<li><p>所有多项式方程都有复根。/并非在所有情况下多项式方程都有实根。</p>
+</li>
+<li><p>20与25之间存在一个素数。/不存在大于2的偶数素数。</p>
+</li>
+<li><p>如果$p$是形如$4n+1$的素数，那么$p$是两个平方数之和。</p>
+</li>
+</ol>
+<p>最后一个命题是关于形如$4n+1$的素数的，这一定理由高斯贡献。</p>
 
       
     </div>
@@ -193,7 +215,7 @@ seg &lt;- <span class="function">unlist(<span class="function">segmentCN(text)</
 
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/R/">R</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Rwordseg/">Rwordseg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分词/">分词</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/词频/">词频</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/图灵/">图灵</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学思维/">数学思维</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
 
     </footer>
   </div>
@@ -201,15 +223,11 @@ seg &lt;- <span class="function">unlist(<span class="function">segmentCN(text)</
     
 <nav id="article-nav">
   
-    <a href="/2014/05/24/uft8bug/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">新一篇</strong>
-      <div class="article-nav-title">
-        
-          英文版R处理中文显示为UFT-8原码及解决方案
-        
-      </div>
-    </a>
   
+    <a href="/2014/11/26/probability_model/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">旧一篇</strong>
+      <div class="article-nav-title">罗斯《概率模型导论（第11版）》试译</div>
+    </a>
   
 </nav>
 

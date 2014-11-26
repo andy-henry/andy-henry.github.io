@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://andy-henry.github.io/2014/11/26/mathematical_thinking/</loc>
+    <lastmod>2014-11-26T14:52:26.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://andy-henry.github.io/2014/11/26/probability_model/</loc>
+    <lastmod>2014-11-26T14:50:42.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://andy-henry.github.io/2014/09/05/turingbooks/</loc>
+    <lastmod>2014-11-26T14:19:56.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://andy-henry.github.io/2014/09/20/brother_sen2/</loc>
     <lastmod>2014-09-22T15:32:02.000Z</lastmod>
   </url>
@@ -14,11 +29,6 @@
   <url>
     <loc>http://andy-henry.github.io/2014/09/15/brother_sen/</loc>
     <lastmod>2014-09-15T05:30:02.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://andy-henry.github.io/2014/09/05/turingbooks/</loc>
-    <lastmod>2014-09-05T05:32:44.000Z</lastmod>
   </url>
   
   <url>
